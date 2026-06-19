@@ -17,7 +17,8 @@ ukds_dict <- c("4683" = "Millennium Cohort Study - Age 9 months, Sweep 1, 2001",
                "7464" = "Millennium Cohort Study - Age 11, Sweep 5, 2012",
                "8156" = "Millennium Cohort Study - Age 14, Sweep 6, 2015",
                "8172" = "Millennium Cohort Study - Sweeps 1-7, 2001-2018 - Longitudinal Family File",
-               "8682" = "Millennium Cohort Study - Age 17, Sweep 7, 2018")
+               "8682" = "Millennium Cohort Study - Age 17, Sweep 7, 2018",
+               "9509" = "Millennium Cohort Study - Age 23, Sweep 8, 2023-2025")
 
 dir.create("UKDS")
 
@@ -33,7 +34,7 @@ list.files("Zipped", "\\.zip", full.names = TRUE) %>%
 # 2. Place in Sweep Folders ----
 ## a. Make Sweep Folders ----
 mcs_sweeps <- c("0y", "3y", "5y", "7y", 
-                "11y", "14y", "17y")
+                "11y", "14y", "17y", "23y")
 c(mcs_sweeps, "xwave") %>%
   walk(dir.create)
 
